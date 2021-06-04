@@ -1,0 +1,26 @@
+[
+  {
+	  "name": "John Smith",	
+	  "address": "345 South Sanjose Street, Sanjose",	
+	  "ssn": "32444567",
+	  "companyregdate": "2021-01-28",
+	  "company": "Pimspan",
+	  "registered": true
+  },
+  {
+	  "name": "Thomas Smith",	
+	  "address":  "345 South Sandiego Street, SanDiego",	
+	  "ssn": "31444537",
+	  "companyregdate": "2021-03-25",
+	  "company": "Dipspan",
+	  "registered": false
+  },
+  {
+	  "name": "Francis Smith",	
+	  "address":  "345 South Sandiego Street, SanDiego",	
+	  "ssn": "32444547",
+	  "companyregdate": "2021-02-15",
+	  "company": "Dipspan",
+	  "registered": true
+  }
+]

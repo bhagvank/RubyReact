@@ -1,0 +1,1281 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateEvents (20190128145130)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "event_type" varchar, "event_date" date, "title" text, "speaker" varchar, "host" varchar, "published" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190128145130_create_events.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190128145130"]]
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-30 19:39:33.933140"], ["updated_at", "2021-05-30 19:39:33.933140"]]
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mEvent Create (1.5ms)[0m  [1m[32mINSERT INTO "events" ("event_type", "event_date", "title", "speaker", "host", "published", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["event_type", "Symposium"], ["event_date", "2018-05-01"], ["title", "A Social-Neuroscience Perspective on Empathy"], ["speaker", "Albert von Bezold, Jules Cotard, Marian Diamond"], ["host", "Alcmaeon of Croton"], ["published", 1], ["created_at", "2021-05-30 19:47:31.130261"], ["updated_at", "2021-05-30 19:47:31.130261"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("event_type", "event_date", "title", "speaker", "host", "published", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["event_type", "Colloquium"], ["event_date", "2018-04-01"], ["title", "The Neuroscience of Restorative Justice"], ["speaker", "Albert Einstein"], ["host", "Stephen Hawking"], ["published", 1], ["created_at", "2021-05-30 19:47:31.135682"], ["updated_at", "2021-05-30 19:47:31.135682"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("event_type", "event_date", "title", "speaker", "host", "published", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["event_type", "Symposium"], ["event_date", "2018-04-01"], ["title", "Cognitive Development Theory"], ["speaker", "Francis Glisson, Ragnar Granit, Nils-Åke Hillarp"], ["host", "David H. Hubel, Herbert Jasper"], ["published", 1], ["created_at", "2021-05-30 19:47:31.139041"], ["updated_at", "2021-05-30 19:47:31.139041"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("event_type", "event_date", "title", "speaker", "host", "published", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["event_type", "Symposium"], ["event_date", "2017-05-01"], ["title", "The Neuroscience of Moral Decision Making in Ethics"], ["speaker", "Michel Jouvet, Bernard Katz, Emil Kraepelin"], ["host", "Lawrence C. Katz"], ["published", 1], ["created_at", "2021-05-30 19:47:31.142362"], ["updated_at", "2021-05-30 19:47:31.142362"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("event_type", "event_date", "title", "speaker", "host", "published", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["event_type", "Symposium"], ["event_date", "2017-05-01"], ["title", "Ovariectomy Effect on Hippocampus Spatial Memory"], ["speaker", "Rita Levi-Montalcini, John C. Lilly, Horace Winchell Magoun"], ["host", "Mondino de Luzzi, Walle Nauta"], ["published", 1], ["created_at", "2021-05-30 19:47:31.146043"], ["updated_at", "2021-05-30 19:47:31.146043"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("event_type", "event_date", "title", "speaker", "host", "published", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["event_type", "Colloquium"], ["event_date", "2017-05-01"], ["title", "Left Brain Vs Right Brain how does this impact learning"], ["speaker", "Aristides Leão"], ["host", "Louis Lapicque"], ["published", 1], ["created_at", "2021-05-30 19:47:31.149831"], ["updated_at", "2021-05-30 19:47:31.149831"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+Started GET "/" for ::1 at 2021-05-31 01:20:07 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/events" for ::1 at 2021-05-31 01:20:07 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (2.7ms)
+[Webpacker] Compiling...
+Started GET "/events" for ::1 at 2021-05-31 01:20:20 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.8ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Downloads/react-rails-crud-app-master/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 19866ms (Views: 19863.9ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Downloads/react-rails-crud-app-master/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 10803ms (Views: 10799.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/events.json" for ::1 at 2021-05-31 01:20:32 +0530
+Processing by Api::EventsController#index as JSON
+  [1m[36mEvent Load (3.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."event_date" DESC[0m
+  ↳ app/controllers/api/events_controller.rb:7
+Completed 200 OK in 48ms (Views: 31.9ms | ActiveRecord: 4.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateEvents (20190128145130)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+Migrating to CreateCustomers (20190128145130)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190128145130_create_customers.rb:5
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "name" text, "ssn" varchar, "company" varchar, "registered" boolean, "companyregdate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190128145130_create_customers.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190128145130"]]
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-01 10:33:21.961476"], ["updated_at", "2021-06-01 10:33:21.961476"]]
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCustomer Create (0.9ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "345 South Sanjose Street, Sanjose"], ["name", "John Smith"], ["ssn", "32444567"], ["company", "Pimspan"], ["registered", 1], ["companyregdate", "2021-01-28"], ["created_at", "2021-06-01 10:44:15.378184"], ["updated_at", "2021-06-01 10:44:15.378184"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "345 South Sandiego Street, SanDiego"], ["name", "Thomas Smith"], ["ssn", "31444537"], ["company", "Dipspan"], ["registered", 0], ["companyregdate", "20121-03-25"], ["created_at", "2021-06-01 10:44:15.385206"], ["updated_at", "2021-06-01 10:44:15.385206"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCustomer Create (0.7ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "345 South Sandiego Street, SanDiego"], ["name", "Francis Smith"], ["ssn", "32444547"], ["company", "Dipspan"], ["registered", 1], ["companyregdate", "20121-02-15"], ["created_at", "2021-06-01 10:44:15.389139"], ["updated_at", "2021-06-01 10:44:15.389139"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+Started GET "/" for ::1 at 2021-06-01 16:15:07 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/events" for ::1 at 2021-06-01 16:15:07 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/events"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+webpacker (6.0.0.pre.2) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/customers" for ::1 at 2021-06-01 16:15:27 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:15:51 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 74.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:20:04 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (3.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:31:15 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (89.2ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 47297ms (Views: 47289.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:33:24 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (2.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 229ms (Views: 214.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:34:01 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (13.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:34:39 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (9.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:35:09 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (7.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:36:58 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (15.0ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 20207ms (Views: 20200.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:38:06 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (13.3ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 11298ms (Views: 11294.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-01 16:38:18 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 75ms (Views: 33.5ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:38:45 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-01 16:38:45 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:39:09 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (3.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-01 16:39:10 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 54ms (Views: 18.0ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-01 16:41:27 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (10.9ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 77bb5c3c4bf89ea63ff6
+Version: webpack 4.41.5
+Time: 6622ms
+Built at: 06/01/2021 4:41:38 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3d6a29c1a2e123a78825.js   1.56 MiB  application  [emitted] [immutable]  application
+js/application-3d6a29c1a2e123a78825.js.map    1.7 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3d6a29c1a2e123a78825.js js/application-3d6a29c1a2e123a78825.js.map
+[./app/javascript/helpers/helpers.js] 1.17 KiB {application} [built]
+[./app/javascript/helpers/notifications.js] 1.41 KiB {application} [built]
+[./app/javascript/packs/application.js] 655 bytes {application} [built]
+[./node_modules/pikaday sync recursive] ./node_modules/pikaday sync 160 bytes {application} [optional] [built]
+    + 104 hidden modules
+
+WARNING in ./node_modules/pikaday/pikaday.js 28:17-24
+Critical dependency: the request of a dependency is an expression
+ @ ./app/javascript/components/EventForm.js
+ @ ./app/javascript/components/Editor.js
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/packs/application.js
+
+WARNING in ./node_modules/pikaday/pikaday.js
+Module not found: Error: Can't resolve 'moment' in '/Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/node_modules/pikaday'
+ @ ./node_modules/pikaday/pikaday.js
+ @ ./app/javascript/components/EventForm.js
+ @ ./app/javascript/components/Editor.js
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/EventForm.js 95:19-32
+"export 'validateEvent' was not found in '../helpers/helpers'
+ @ ./app/javascript/components/Editor.js
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/packs/application.js
+
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 11707ms (Views: 11701.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-01 16:41:40 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (10.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 23ms (Views: 8.9ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-02 00:33:37 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (3.1ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: b2b47e65e874f5bceb33
+Version: webpack 4.41.5
+Time: 5155ms
+Built at: 06/02/2021 12:33:48 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-11ca064c05a919d52d79.js   1.48 MiB  application  [emitted] [immutable]  application
+js/application-11ca064c05a919d52d79.js.map   1.63 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-11ca064c05a919d52d79.js js/application-11ca064c05a919d52d79.js.map
+[./app/javascript/helpers/helpers.js] 1.17 KiB {application} [built]
+[./app/javascript/helpers/notifications.js] 1.41 KiB {application} [built]
+[./app/javascript/packs/application.js] 655 bytes {application} [built]
+    + 97 hidden modules
+
+ERROR in ./app/javascript/components/Editor.js
+Module not found: Error: Can't resolve './Event' in '/Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/app/javascript/components'
+ @ ./app/javascript/components/Editor.js 32:0-28
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/Editor.js
+Module not found: Error: Can't resolve './EventForm' in '/Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/app/javascript/components'
+ @ ./app/javascript/components/Editor.js 33:0-36
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/packs/application.js
+
+ERROR in ./app/javascript/components/Editor.js
+Module not found: Error: Can't resolve './EventList' in '/Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/app/javascript/components'
+ @ ./app/javascript/components/Editor.js 34:0-36 163:29-38
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/packs/application.js
+
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 10807ms (Views: 10799.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-02 00:37:16 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (9.5ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 10885ms (Views: 10879.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:37:29 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 73ms (Views: 33.2ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/customers/2/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:38:05 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"2"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:38:06 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/3/edit?name=Francis+Smith&companyregdate=2021-02-15&address=345+South+Sandiego+Street%2C+SanDiego&ssn=32444547&company=Dipspan&registered=on" for ::1 at 2021-06-02 00:38:38 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Francis Smith", "companyregdate"=>"2021-02-15", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"32444547", "company"=>"Dipspan", "registered"=>"on", "id"=>"3"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:38:39 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (5.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 17ms (Views: 4.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/customers/3/edit?name=Francis+Smith&companyregdate=20121-02-15&address=345+South+Sandiego+Street%2C+SanDiego&ssn=32444547&company=Dipspan&registered=on" for ::1 at 2021-06-02 00:38:47 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Francis Smith", "companyregdate"=>"20121-02-15", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"32444547", "company"=>"Dipspan", "registered"=>"on", "id"=>"3"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:38:48 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCustomer Create (0.7ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "345 South Sanjose Street, Sanjose"], ["name", "John Smith"], ["ssn", "32444567"], ["company", "Pimspan"], ["registered", 1], ["companyregdate", "2021-01-28"], ["created_at", "2021-06-01 19:09:46.313775"], ["updated_at", "2021-06-01 19:09:46.313775"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "345 South Sandiego Street, SanDiego"], ["name", "Thomas Smith"], ["ssn", "31444537"], ["company", "Dipspan"], ["registered", 0], ["companyregdate", "2021-03-25"], ["created_at", "2021-06-01 19:09:46.318566"], ["updated_at", "2021-06-01 19:09:46.318566"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "345 South Sandiego Street, SanDiego"], ["name", "Francis Smith"], ["ssn", "32444547"], ["company", "Dipspan"], ["registered", 1], ["companyregdate", "2021-02-15"], ["created_at", "2021-06-01 19:09:46.322514"], ["updated_at", "2021-06-01 19:09:46.322514"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+Started GET "/customers/3/edit?name=Francis+Smith&companyregdate=20121-02-15&address=345+South+Sandiego+Street%2C+SanDiego&ssn=32444547&company=Dipspan&registered=on" for ::1 at 2021-06-02 00:40:10 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bhagvan.kommadi/.rvm/gems/ruby-2.6.5/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Francis Smith", "companyregdate"=>"20121-02-15", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"32444547", "company"=>"Dipspan", "registered"=>"on", "id"=>"3"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:40:11 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 36ms (Views: 24.5ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/api/customers/2.json" for ::1 at 2021-06-02 00:40:25 +0530
+Processing by Api::CustomersController#destroy as JSON
+  Parameters: {"id"=>"2"}
+Can't verify CSRF token authenticity.
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[36mCustomer Destroy (3.2ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:19
+Completed 204 No Content in 13ms (ActiveRecord: 5.3ms)
+
+
+Started DELETE "/api/customers/3.json" for ::1 at 2021-06-02 00:40:33 +0530
+Processing by Api::CustomersController#destroy as JSON
+  Parameters: {"id"=>"3"}
+Can't verify CSRF token authenticity.
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[36mCustomer Destroy (0.8ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:19
+Completed 204 No Content in 9ms (ActiveRecord: 2.7ms)
+
+
+Started DELETE "/api/customers/2.json" for ::1 at 2021-06-02 00:41:16 +0530
+Processing by Api::CustomersController#destroy as JSON
+  Parameters: {"id"=>"2"}
+Can't verify CSRF token authenticity.
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:19
+Completed 404 Not Found in 7ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Customer with 'id'=2):
+  
+app/controllers/api/customers_controller.rb:19:in `destroy'
+Started GET "/api/" for ::1 at 2021-06-02 00:41:47 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+webpacker (6.0.0.pre.2) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/customers/1" for ::1 at 2021-06-02 00:42:23 +0530
+Processing by Api::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:11
+Completed 406 Not Acceptable in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/api/customers_controller.rb:11:in `show'
+Started GET "/customers/2" for ::1 at 2021-06-02 00:43:01 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"id"=>"2"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.4ms)
+[Webpacker] Compiling...
+Started GET "/customers/2" for ::1 at 2021-06-02 00:43:04 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"id"=>"2"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 14620ms (Views: 14616.0ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 12056ms (Views: 12053.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:43:17 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego%2C+U.S.A&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:43:31 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego, U.S.A", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:43:31 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:44:21 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:44:21 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:44:24 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:44:25 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego%2C+u.s.a&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:44:43 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego, u.s.a", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:44:44 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:44:45 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:44:46 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:44:50 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:44:50 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:46:17 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:46:18 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:47:18 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.2ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 11559ms (Views: 11556.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:47:35 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:47:36 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customers/" for ::1 at 2021-06-02 00:47:48 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:47:49 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/new" for ::1 at 2021-06-02 00:52:12 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 10748ms (Views: 10744.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:52:23 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers/new?name=George+Smith&companyregdate=2021-06-14&address=238%2C+West+Mac+Street%2C+New+York&ssn=345789876&company=Comstate" for ::1 at 2021-06-02 00:53:33 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"George Smith", "companyregdate"=>"2021-06-14", "address"=>"238, West Mac Street, New York", "ssn"=>"345789876", "company"=>"Comstate"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:53:34 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego%2C+USA&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:54:12 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego, USA", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (15.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:54:14 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (9.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 31ms (Views: 12.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:54:18 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:54:20 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/5/edit?name=Thomas+Smith&companyregdate=2021-03-25&address=345+South+Sandiego+Street%2C+SanDiego%2C+USA&ssn=31444537&company=Dipspan" for ::1 at 2021-06-02 00:55:37 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"name"=>"Thomas Smith", "companyregdate"=>"2021-03-25", "address"=>"345 South Sandiego Street, SanDiego, USA", "ssn"=>"31444537", "company"=>"Dipspan", "id"=>"5"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (9.9ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+
+Completed 200 OK in 11816ms (Views: 11811.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 00:55:50 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (8.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "event_date" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 22ms (Views: 10.6ms | ActiveRecord: 8.7ms)
+
+
+Started PUT "/api/customers/5.json" for ::1 at 2021-06-02 00:55:59 +0530
+Processing by Api::CustomersController#update as JSON
+  Parameters: {"id"=>"5", "address"=>"345 South Sandiego Street, SanDiego, USA", "name"=>"Thomas Smith", "ssn"=>"31444537", "company"=>"Dipspan", "registered"=>false, "companyregdate"=>"2021-03-25", "created_at"=>"2021-06-01T19:09:46.318Z", "updated_at"=>"2021-06-01T19:09:46.318Z", "customer"=>{"id"=>"5", "address"=>"345 South Sandiego Street, SanDiego, USA", "name"=>"Thomas Smith", "ssn"=>"31444537", "company"=>"Dipspan", "registered"=>false, "companyregdate"=>"2021-03-25", "created_at"=>"2021-06-01T19:09:46.318Z", "updated_at"=>"2021-06-01T19:09:46.318Z"}}
+Can't verify CSRF token authenticity.
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:23
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (undefined local variable or method `customer_params' for #<Api::CustomersController:0x00007fe44355d000>
+Did you mean?  customer):
+  
+app/controllers/api/customers_controller.rb:24:in `update'
+Started POST "/api/customers.json" for ::1 at 2021-06-02 01:01:30 +0530
+Processing by Api::CustomersController#create as JSON
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/api/customers_controller.rb:31:in `event_params'
+app/controllers/api/customers_controller.rb:15:in `create'
+Started POST "/api/customers.json" for ::1 at 2021-06-02 01:15:47 +0530
+Processing by Api::CustomersController#create as JSON
+  Parameters: {"name"=>"Jack Smith", "address"=>"345 South Sanjose Street, Sanjose", "ssn"=>"32444517", "companyregdate"=>"2021-01-28", "company"=>"Pimspan", "registered"=>true, "customer"=>{"address"=>"345 South Sanjose Street, Sanjose", "name"=>"Jack Smith", "ssn"=>"32444517", "company"=>"Pimspan", "registered"=>true, "companyregdate"=>"2021-01-28"}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/api/customers_controller.rb:31:in `event_params'
+app/controllers/api/customers_controller.rb:15:in `create'
+Started POST "/api/customers.json" for ::1 at 2021-06-02 01:17:05 +0530
+Processing by Api::CustomersController#create as JSON
+  Parameters: {"name"=>"Jack Smith", "address"=>"345 South Sanjose Street, Sanjose", "ssn"=>"32444517", "companyregdate"=>"2021-01-28", "company"=>"Pimspan", "registered"=>true, "customer"=>{"address"=>"345 South Sanjose Street, Sanjose", "name"=>"Jack Smith", "ssn"=>"32444517", "company"=>"Pimspan", "registered"=>true, "companyregdate"=>"2021-01-28"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 1279ms (ActiveRecord: 15.3ms)
+
+
+  
+NameError (undefined local variable or method `customer_params' for #<Api::CustomersController:0x00007fe44345cca0>
+Did you mean?  customers_path):
+  
+app/controllers/api/customers_controller.rb:15:in `create'
+Started PUT "/api/customers/5.json" for ::1 at 2021-06-02 01:20:41 +0530
+Processing by Api::CustomersController#update as JSON
+  Parameters: {"id"=>"5", "address"=>"345 South Sandiego Street, SanDiego, USA", "name"=>"Thomas Smith", "ssn"=>"31444537", "company"=>"Dipspan", "registered"=>false, "companyregdate"=>"2021-03-25", "created_at"=>"2021-06-01T19:09:46.318Z", "updated_at"=>"2021-06-01T19:09:46.318Z", "customer"=>{"id"=>"5", "address"=>"345 South Sandiego Street, SanDiego, USA", "name"=>"Thomas Smith", "ssn"=>"31444537", "company"=>"Dipspan", "registered"=>false, "companyregdate"=>"2021-03-25", "created_at"=>"2021-06-01T19:09:46.318Z", "updated_at"=>"2021-06-01T19:09:46.318Z"}}
+Can't verify CSRF token authenticity.
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:23
+Unpermitted parameters: :created_at, :updated_at
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:24
+  [1m[36mCustomer Update (8.4ms)[0m  [1m[33mUPDATE "customers" SET "address" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["address", "345 South Sandiego Street, SanDiego, USA"], ["updated_at", "2021-06-01 19:50:42.029354"], ["id", 5]]
+  ↳ app/controllers/api/customers_controller.rb:24
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:24
+Completed 200 OK in 40ms (Views: 3.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/customers/6" for ::1 at 2021-06-02 01:22:30 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"id"=>"6"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (2.1ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 12466ms (Views: 12457.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:22:44 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (7.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 22ms (Views: 9.3ms | ActiveRecord: 7.5ms)
+
+
+Started PUT "/api/customers/6.json" for ::1 at 2021-06-02 01:22:55 +0530
+Processing by Api::CustomersController#update as JSON
+  Parameters: {"id"=>"6", "address"=>"345 South Sandiego Street, SanDiego, U.S.A", "name"=>"Francis Smith", "ssn"=>"32444547", "company"=>"Dipspan", "registered"=>true, "companyregdate"=>"2021-02-15", "created_at"=>"2021-06-01T19:09:46.322Z", "updated_at"=>"2021-06-01T19:09:46.322Z", "customer"=>{"id"=>"6", "address"=>"345 South Sandiego Street, SanDiego, U.S.A", "name"=>"Francis Smith", "ssn"=>"32444547", "company"=>"Dipspan", "registered"=>true, "companyregdate"=>"2021-02-15", "created_at"=>"2021-06-01T19:09:46.322Z", "updated_at"=>"2021-06-01T19:09:46.322Z"}}
+Can't verify CSRF token authenticity.
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:23
+Unpermitted parameters: :created_at, :updated_at
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:24
+  [1m[36mCustomer Update (4.3ms)[0m  [1m[33mUPDATE "customers" SET "address" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["address", "345 South Sandiego Street, SanDiego, U.S.A"], ["updated_at", "2021-06-01 19:52:55.906653"], ["id", 6]]
+  ↳ app/controllers/api/customers_controller.rb:24
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:24
+Completed 200 OK in 23ms (Views: 1.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/customers/1" for ::1 at 2021-06-02 01:23:08 +0530
+Processing by SiteController#index as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:23:09 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/customers/4.json" for ::1 at 2021-06-02 01:23:15 +0530
+Processing by Api::CustomersController#destroy as JSON
+  Parameters: {"id"=>"4"}
+Can't verify CSRF token authenticity.
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[36mCustomer Destroy (0.8ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/api/customers_controller.rb:19
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:19
+Completed 204 No Content in 9ms (ActiveRecord: 3.4ms)
+
+
+Started POST "/api/customers.json" for ::1 at 2021-06-02 01:24:17 +0530
+Processing by Api::CustomersController#create as JSON
+  Parameters: {"name"=>"George Smith", "companyregdate"=>"2021-06-14", "address"=>"218, East Pam Street, New York", "ssn"=>"235673452", "company"=>"Comstate", "registered"=>true, "customer"=>{"address"=>"218, East Pam Street, New York", "name"=>"George Smith", "ssn"=>"235673452", "company"=>"Comstate", "registered"=>true, "companyregdate"=>"2021-06-14"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[36mCustomer Create (7.3ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "218, East Pam Street, New York"], ["name", "George Smith"], ["ssn", "235673452"], ["company", "Comstate"], ["registered", 1], ["companyregdate", "2021-06-14"], ["created_at", "2021-06-01 19:54:17.390771"], ["updated_at", "2021-06-01 19:54:17.390771"]]
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+Completed 201 Created in 308ms (Views: 202.9ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:25:02 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/new" for ::1 at 2021-06-02 01:25:05 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (2.0ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 11210ms (Views: 11207.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:25:17 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/customers.json" for ::1 at 2021-06-02 01:26:13 +0530
+Processing by Api::CustomersController#create as JSON
+  Parameters: {"name"=>"Tim Smith", "companyregdate"=>"2021-06-04", "address"=>"134, West Street, New Jersey", "ssn"=>"982342312", "company"=>"Conspin", "registered"=>false, "customer"=>{"address"=>"134, West Street, New Jersey", "name"=>"Tim Smith", "ssn"=>"982342312", "company"=>"Conspin", "registered"=>false, "companyregdate"=>"2021-06-04"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (4.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[36mCustomer Create (3.7ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "134, West Street, New Jersey"], ["name", "Tim Smith"], ["ssn", "982342312"], ["company", "Conspin"], ["registered", 0], ["companyregdate", "2021-06-04"], ["created_at", "2021-06-01 19:56:13.437702"], ["updated_at", "2021-06-01 19:56:13.437702"]]
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+Completed 201 Created in 40ms (Views: 2.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:26:30 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/" for ::1 at 2021-06-02 01:26:35 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:26:36 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:27:19 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/" for ::1 at 2021-06-02 01:27:24 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.8ms)
+[Webpacker] Compiling...
+Started GET "/customers/" for ::1 at 2021-06-02 01:27:32 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 11108ms (Views: 11106.3ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 9320ms (Views: 9317.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:27:42 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 10ms (Views: 2.6ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/customers.json" for ::1 at 2021-06-02 01:28:46 +0530
+Processing by Api::CustomersController#create as JSON
+  Parameters: {"name"=>"Jack Cruise", "companyregdate"=>"2021-05-10", "address"=>"219, West Cycle Street, Atlanta", "ssn"=>"123904532", "company"=>"Listspan", "registered"=>true, "customer"=>{"address"=>"219, West Cycle Street, Atlanta", "name"=>"Jack Cruise", "ssn"=>"123904532", "company"=>"Listspan", "registered"=>true, "companyregdate"=>"2021-05-10"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[36mCustomer Create (1.6ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "219, West Cycle Street, Atlanta"], ["name", "Jack Cruise"], ["ssn", "123904532"], ["company", "Listspan"], ["registered", 1], ["companyregdate", "2021-05-10"], ["created_at", "2021-06-01 19:58:46.042828"], ["updated_at", "2021-06-01 19:58:46.042828"]]
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+Completed 201 Created in 36ms (Views: 2.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/customers" for ::1 at 2021-06-02 01:29:46 +0530
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.5ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/bhagvan.kommadi/Desktop/Ruby/react_ruby_on_rails_crm/public/packs
+[Webpacker] 
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 11381ms (Views: 11378.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/customers.json" for ::1 at 2021-06-02 01:29:59 +0530
+Processing by Api::CustomersController#index as JSON
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."companyregdate" DESC[0m
+  ↳ app/controllers/api/customers_controller.rb:7
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/customers.json" for ::1 at 2021-06-02 01:31:52 +0530
+Processing by Api::CustomersController#create as JSON
+  Parameters: {"name"=>"Grace Cooper", "companyregdate"=>"2021-05-18", "address"=>"871, South Valley street, Los Angeles", "ssn"=>"239842312", "company"=>"Foldspan", "registered"=>true, "customer"=>{"address"=>"871, South Valley street, Los Angeles", "name"=>"Grace Cooper", "ssn"=>"239842312", "company"=>"Foldspan", "registered"=>true, "companyregdate"=>"2021-05-18"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[36mCustomer Create (1.1ms)[0m  [1m[32mINSERT INTO "customers" ("address", "name", "ssn", "company", "registered", "companyregdate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "871, South Valley street, Los Angeles"], ["name", "Grace Cooper"], ["ssn", "239842312"], ["company", "Foldspan"], ["registered", 1], ["companyregdate", "2021-05-18"], ["created_at", "2021-06-01 20:01:52.457352"], ["updated_at", "2021-06-01 20:01:52.457352"]]
+  ↳ app/controllers/api/customers_controller.rb:15
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/customers_controller.rb:15
+Completed 201 Created in 31ms (Views: 2.6ms | ActiveRecord: 3.6ms)
+
+

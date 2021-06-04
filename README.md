@@ -1,2 +1,12 @@
 # RubyReact
-React front end with backend in Ruby.
+React front end with backend in Ruby
+.
+
+- Clone repo
+- Run `bundle install`
+- Run `yarn install`
+- Run `rake db:create`, `rake db:migrate`, then `rake db:seed`
+
+## Running
+
+- Start the Rails server with `rails s`
